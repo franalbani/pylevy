@@ -10,6 +10,7 @@ setup(name='PyLevy',
       description='A package for calculating and fitting Levy stable distributions.',
       long_description='Read levy/__init__.py',
       packages=['levy'],
+      install_requires = [line.strip() for line in open('requirements.txt')],
       package_data={'levy': ['cdf.npz', 'pdf.npz', 'lower_limit.npz', 'upper_limit.npz']},
       options={'sdist': {'force_manifest': True}},
      )
